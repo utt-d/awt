@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">AWT</string>
+    <string name="alarm_channel_name">アラーム</string>
+    <string name="alarm_channel_description">AWTのアラームとタイマーを鳴らします</string>
+    <string name="widget_description">次のアラームを表示します</string>
+</resources>

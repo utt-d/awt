@@ -1,0 +1,15 @@
+<resources>
+    <style name="Theme.AWT" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">#101521</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">#101521</item>
+        <item name="android:navigationBarColor">#101521</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+
+    <style name="Theme.AWT.Alarm" parent="Theme.AWT">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>
