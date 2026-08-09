@@ -16,6 +16,7 @@ app/build/
 .device-share-tools/
 awt-v*-frames/
 *.apk
+*.idsig
 *.log
 *.pid
 /*.png

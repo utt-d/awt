@@ -53,9 +53,12 @@ The debug APK is written to `app/build/outputs/apk/debug/app-debug.apk`.
 
 ## 実機へのインストール
 
-実機確認用APKは、プロジェクト直下の
-`AWT-v0.11.0-device-test.apk` です。Android 8.0（API 26）以降に対応しています。
-これはAndroidのデバッグ鍵で署名したテスト専用ビルドです。
+本番配布用APKは、GitHub Releaseとプロジェクト直下の
+`AWT-v0.11.0-release.apk` です。Android 8.0（API 26）以降に対応しています。
+AWT専用の本番証明書で署名し、Release最適化とリソース縮小を適用しています。
+
+以前のデバッグ署名版をインストールしている場合は、署名が異なるため一度アンインストールしてから
+本番版をインストールしてください。初回移行時のみ端末内のAWT設定が消去されます。
 
 ### USB経由
 
@@ -65,14 +68,14 @@ The debug APK is written to `app/build/outputs/apk/debug/app-debug.apk`.
 
 ```powershell
 & "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" devices
-& "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" install -r ".\AWT-v0.11.0-device-test.apk"
+& "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" install -r ".\AWT-v0.11.0-release.apk"
 ```
 
 複数の端末やエミュレータが接続中の場合は、1行目で実機のシリアル番号を確認し、
 次のように対象を指定します。
 
 ```powershell
-& "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" -s <実機のシリアル番号> install -r ".\AWT-v0.11.0-device-test.apk"
+& "$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe" -s <実機のシリアル番号> install -r ".\AWT-v0.11.0-release.apk"
 ```
 
 ### 端末単体
